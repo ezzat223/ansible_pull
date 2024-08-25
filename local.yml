@@ -8,7 +8,7 @@
     - name: Update repository index
       package:
         update_cache: yes
-      changes_when: false
+      changed_when: false
 
   tasks:
     - include: tasks/users.yaml
