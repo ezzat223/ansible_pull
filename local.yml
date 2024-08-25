@@ -11,6 +11,6 @@
       changed_when: false
 
   tasks:
-    - include: tasks/users.yaml
-    - include: tasks/cron.yaml
-    -  include: tasks/packages.yaml
+    - include_tasks: tasks/users.yaml
+    - include_tasks: tasks/cron.yaml
+    - include_tasks: tasks/packages.yaml
