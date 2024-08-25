@@ -1,14 +1,16 @@
+---
+
 - hosts: localhost
   connection: local
   become: true
   pre_tasks: 
 
-  - name: Update repository index
-    package:
-      update_cache: yes
-    changes_when: false
+    - name: Update repository index
+      package:
+        update_cache: yes
+      changes_when: false
 
   tasks:
-  - include: tasks/users.yaml
-  - include: tasks/cron.yaml
-  - include: tasks/packages.yaml
+    - include: tasks/users.yaml
+    - include: tasks/cron.yaml
+    -  include: tasks/packages.yaml
